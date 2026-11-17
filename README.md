@@ -39,6 +39,7 @@ O projeto foi desenvolvido para praticar e integrar tecnologias de desenvolvimen
 
 ## 📁 Estrutura do projeto
 
+```text
 Delivery/
 ├── frontend/
 │   └── src/
@@ -50,7 +51,9 @@ Delivery/
 │       ├── config/
 │       ├── routes/
 │       └── server.js
+├── .gitignore
 └── README.md
+```
 
 ## ⚙️ Como executar o projeto
 
