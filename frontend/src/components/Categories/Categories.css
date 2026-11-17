@@ -1,0 +1,170 @@
+/* ========================================
+   ESTRUTURA E CABEÇALHO DAS CATEGORIAS
+======================================== */
+
+.categories {
+  padding: 50px 6vw 60px;
+
+  background-color: #ffffff;
+}
+
+.categories-header {
+  max-width: 700px;
+
+  margin-bottom: 40px;
+}
+
+.categories-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #e94f2f;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.categories h2 {
+  margin-bottom: 12px;
+
+  color: #292524;
+
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.categories-header p {
+  color: #78716c;
+
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* ========================================
+   LISTA E CARDS DE CATEGORIAS
+======================================== */
+
+.categories-list {
+  width: 100%;
+  max-width: 1400px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.category-card {
+  min-height: 170px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  padding: 24px;
+
+  border: 1px solid #eee5d8;
+  border-radius: 20px;
+
+  background-color: #fffaf3;
+  color: #292524;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.category-card:hover {
+  border-color: #f2b8a5;
+
+  background-color: #fff7f2;
+
+  box-shadow: 0 12px 30px rgba(41, 37, 36, 0.08);
+
+  transform: translateY(-5px);
+}
+
+.category-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background-color: #fce8df;
+  color: #e94f2f;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.category-card:hover .category-icon {
+  background-color: #e94f2f;
+  color: #ffffff;
+}
+
+.category-name {
+  color: #292524;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .categories-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+  .categories {
+    padding: 70px 24px 80px;
+  }
+
+  .categories h2 {
+    font-size: 30px;
+  }
+
+  .categories-list {
+    display: flex;
+    gap: 12px;
+
+    max-width: none;
+
+    overflow-x: auto;
+
+    padding-bottom: 8px;
+
+    scrollbar-width: none;
+  }
+
+  .categories-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-card {
+    flex: 0 0 165px;
+
+    min-height: 145px;
+  }
+}

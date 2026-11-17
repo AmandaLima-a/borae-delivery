@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+/* ========================================
+   RESET GLOBAL
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+
+  background-color: #fffaf3;
+  color: #292524;
+
+  font-family: 'Nunito', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+   ELEMENTOS DE FORMULÁRIO
+======================================== */
+
+button,
+input {
+  font: inherit;
+}

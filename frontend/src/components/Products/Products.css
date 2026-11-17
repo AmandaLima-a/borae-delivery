@@ -1,0 +1,296 @@
+/* ========================================
+   ESTRUTURA E CABEÇALHO DOS PRODUTOS
+======================================== */
+
+.products {
+  padding: 60px 6vw 100px;
+
+  background-color: #fffaf3;
+}
+
+.products-header {
+  width: 100%;
+  max-width: 1400px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+.products-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #e94f2f;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.products h2 {
+  margin-bottom: 12px;
+
+  color: #292524;
+
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.products-header p {
+  color: #78716c;
+
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* ========================================
+   FILTROS DE CATEGORIAS
+======================================== */
+
+.products-filters {
+  width: 100%;
+  max-width: 1400px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+.products-filter {
+  padding: 11px 20px;
+
+  border: 1px solid #eee5d8;
+  border-radius: 999px;
+
+  background-color: #ffffff;
+  color: #57534e;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.products-filter:hover {
+  border-color: #e94f2f;
+  color: #e94f2f;
+}
+
+.products-filter.active {
+  border-color: #e94f2f;
+
+  background-color: #e94f2f;
+  color: #ffffff;
+}
+
+/* ========================================
+   LISTA E CARDS DE PRODUTOS
+======================================== */
+
+.products-list {
+  width: 100%;
+  max-width: 1400px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  overflow: hidden;
+
+  border: 1px solid #eee5d8;
+  border-radius: 20px;
+
+  background-color: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 14px 35px rgba(41, 37, 36, 0.1);
+
+  transform: translateY(-5px);
+}
+
+.product-image {
+  height: 210px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fce8df;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 12px;
+}
+
+.product-info {
+  padding: 22px;
+}
+
+.product-info h3 {
+  margin-bottom: 8px;
+
+  color: #292524;
+
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.product-info p {
+  min-height: 48px;
+
+  margin-bottom: 20px;
+
+  color: #78716c;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-footer strong {
+  color: #292524;
+
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.add-button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 12px;
+
+  background-color: #e94f2f;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-button:hover {
+  background-color: #d94022;
+
+  transform: scale(1.05);
+}
+
+/* ========================================
+   ESTADO SEM RESULTADOS
+======================================== */
+
+.products-empty {
+  padding: 30px 0;
+  color: #78716c;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .products-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+  .products {
+    padding: 70px 24px 80px;
+  }
+
+  .products-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .products h2 {
+    font-size: 30px;
+  }
+
+  .products-list {
+    display: flex;
+    gap: 16px;
+
+    max-width: none;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+
+    scrollbar-width: none;
+  }
+
+  .products-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-card {
+    flex: 0 0 260px;
+  }
+
+  .products-filters {
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin-bottom: 22px;
+    scrollbar-width: none;
+  }
+
+  .products-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .products-filter {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}

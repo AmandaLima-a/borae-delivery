@@ -1,0 +1,24 @@
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (1, 'Boraê Clássico', 'Hambúrguer artesanal, queijo, alface, tomate e molho especial.', 24.90, 'Hambúrgueres', 'borae-classico.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (2, 'Bacon Crocante', 'Hambúrguer artesanal, cheddar cremoso, bacon crocante e molho especial.', 29.90, 'Hambúrgueres', 'bacon-crocante.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (3, 'Cheddar Supreme', 'Hambúrguer artesanal, cheddar cremoso e molho especial da casa.', 31.90, 'Hambúrgueres', 'cheddar-supreme.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (4, 'Duplo Boraê', 'Dois hambúrgueres artesanais, queijo, molho especial e cebola.', 36.90, 'Hambúrgueres', 'duplo-borae.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (5, 'Combo Boraê', 'Hambúrguer clássico, batata frita crocante e refrigerante.', 34.90, 'Combos', 'combo-borae.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (6, 'Combo Bacon', 'Bacon Crocante, batata frita e refrigerante bem gelado.', 39.90, 'Combos', 'combo-bacon.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (7, 'Combo Duplo', 'Duplo Boraê, batata frita crocante e refrigerante.', 46.90, 'Combos', 'combo-duplo.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (8, 'Refri', 'Refrigerante bem gelado para acompanhar seu pedido.', 6.00, 'Bebidas', 'refri-gelado.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (9, 'Limonada', 'Limonada refrescante preparada na hora.', 8.90, 'Bebidas', 'limonada.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (10, 'Milk-shake', 'Milk-shake cremoso de chocolate, finalizado com chantilly.', 14.90, 'Bebidas', 'milkshake.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (11, 'Brownie de Chocolate', 'Brownie macio de chocolate, recheado e com gotas de chocolate.', 14.90, 'Sobremesas', 'brownie-chocolate.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (12, 'Sundae de Chocolate', 'Sorvete cremoso com calda de chocolate.', 12.90, 'Sobremesas', 'sundae-chocolate.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (13, 'Boraê Vegetariano', 'Hambúrguer vegetal estilo carne, queijo muçarela, alface, tomate e molho especial.', 24.90, 'Hambúrgueres', 'borae-vegetariano.webp', true, true);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (14, 'Cheddar Vegetariano', 'Hambúrguer vegetal estilo carne, cheddar cremoso, cebola caramelizada e molho especial.', 31.90, 'Hambúrgueres', 'cheddar-vegetariano.webp', true, true);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (15, 'Combo Vegetariano', 'Boraê Vegetariano, batata frita crocante e refrigerante bem gelado.', 34.90, 'Combos', 'combo-vegetariano.webp', true, true);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (16, 'Frango com Catupiry', 'Molho de tomate, frango desfiado, queijo muçarela e Catupiry cremoso.', 49.90, 'Pizzas', 'pizza-frango-catupiry.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (17, 'Pizza Vegetariana', 'Queijo muçarela, tomate, cebola, pimentão, azeitonas e orégano.', 44.90, 'Pizzas', 'pizza-vegetariana.webp', true, true);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (18, 'Pizza de Calabresa', 'Molho de tomate, queijo muçarela, calabresa fatiada, cebola e orégano.', 42.90, 'Pizzas', 'pizza-calabresa.webp', true, false);
+INSERT INTO products (id, name, description, price, category, image, is_active, vegetarian) VALUES (19, 'Pizza de Mussarela', 'Molho de tomate, queijo muçarela, tomate e orégano.', 39.90, 'Pizzas', 'pizza-mussarela.webp', true, false);
+
+SELECT setval(
+    'products_id_seq',
+    (SELECT MAX(id) FROM products)
+);

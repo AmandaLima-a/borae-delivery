@@ -1,0 +1,187 @@
+/* ========================================
+   ESTRUTURA E CONTEÚDO DO HERO
+======================================== */
+
+.hero {
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  padding: 48px 6vw 40px;
+  
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 16px;
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background-color: #fce8df;
+  color: #e94f2f;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+
+  color: #292524;
+
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+}
+
+.hero p {
+  max-width: 500px;
+
+  margin-bottom: 32px;
+
+  color: #57534e;
+
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* ========================================
+   BOTÃO PRINCIPAL
+======================================== */
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 15px 22px;
+
+  border: none;
+  border-radius: 12px;
+
+  background-color: #e94f2f;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hero-button:hover {
+  background-color: #d94022;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   IMAGEM DO HERO
+======================================== */
+
+.hero-visual {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.hero-visual img {
+  width: min(100%, 620px);
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .hero {
+    gap: 40px;
+    padding: 60px 32px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero-visual img {
+    width: 100%;
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+
+    flex-direction: column;
+
+    padding: 60px 24px 80px;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-visual {
+    width: 100%;
+  }
+
+  .hero-visual img {
+    width: min(100%, 600px);
+  }
+}
+
+/* CELULAR PEQUENO */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 48px 20px 60px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .hero-visual img {
+    width: 100%;
+  }
+}
