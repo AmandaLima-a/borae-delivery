@@ -6,6 +6,12 @@ Aplicação web de delivery desenvolvida com React.js, Node.js, Express e Postgr
 
 O projeto foi desenvolvido para praticar e integrar tecnologias de desenvolvimento Front-end e Back-end, incluindo consumo de API, gerenciamento de estado, persistência de dados e operações com banco de dados relacional.
 
+## 🌐 Demonstração
+
+- **Aplicação:** https://borae-delivery.netlify.app/
+- **API:** https://borae-delivery.onrender.com
+- **Repositório:** https://github.com/AmandaLima-a/borae-delivery
+
 ## 🚀 Tecnologias utilizadas
 
 ### Front-end
